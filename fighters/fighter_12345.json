@@ -1,0 +1,21 @@
+{
+    "id": "12345",
+    "name": "Daniel Fong",
+    "nationality": "United States",
+    "categories": [
+        "Rapier and Dagger (Mixed, Steel)",
+        "Sabre (Mixed & Men's, Steel)",
+        "Singlestick (Mixed)"
+    ],
+    "ratings": [
+        "1639.4",
+        "1286.2",
+        "1139.6"
+    ],
+    "rankings": [
+        "39",
+        "619",
+        "318"
+    ],
+    "club_id": "619"
+}

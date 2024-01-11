@@ -1,0 +1,33 @@
+{
+    "id": "2",
+    "name": "Matthys Kool",
+    "nationality": "Netherlands",
+    "categories": [
+        "Longsword (Mixed & Men's, Steel)",
+        "Rapier and Dagger (Mixed, Steel)",
+        "Sabre (Mixed & Men's, Steel)",
+        "Sidesword (Mixed, Steel)",
+        "Single Rapier (Mixed, Steel)",
+        "Singlestick (Mixed)",
+        "Sword and Buckler (Mixed, Steel)"
+    ],
+    "ratings": [
+        "1914.7",
+        "1758.9",
+        "1602.4",
+        "1209.4",
+        "1565.5",
+        "1628.6",
+        "1637.1"
+    ],
+    "rankings": [
+        "8",
+        "14",
+        "78",
+        "290",
+        "80",
+        "16",
+        "57"
+    ],
+    "club_id": "8"
+}

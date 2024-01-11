@@ -1,0 +1,30 @@
+{
+    "id": "652",
+    "name": "Nicole Smith",
+    "nationality": "Canada",
+    "categories": [
+        "Longsword (Mixed & Men's, Steel)",
+        "Longsword (Underrepresented Genders & Women's, Steel)",
+        "Longsword (Women's, Steel)",
+        "Rapier and Dagger (Mixed, Steel)",
+        "Singlestick (Mixed)",
+        "Sword and Buckler (Mixed, Steel)"
+    ],
+    "ratings": [
+        "1213.2",
+        "1578.9",
+        "1578.9",
+        "1231.3",
+        "712",
+        "1149.1"
+    ],
+    "rankings": [
+        "2455",
+        "41",
+        "35",
+        "500",
+        "762",
+        "828"
+    ],
+    "club_id": "152"
+}

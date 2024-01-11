@@ -1,0 +1,30 @@
+{
+    "id": "5126",
+    "name": "Alan West",
+    "nationality": "United States",
+    "categories": [
+        "Longsword (Mixed & Men's, Nylon)",
+        "Longsword (Mixed & Men's, Steel)",
+        "Sabre (Mixed & Men's, Steel)",
+        "Sidesword (Mixed, Steel)",
+        "Singlestick (Mixed)",
+        "Sword and Buckler (Mixed, Steel)"
+    ],
+    "ratings": [
+        "830.9",
+        "1196.7",
+        "1013.8",
+        "1133.7",
+        "1009.6",
+        "1251.2"
+    ],
+    "rankings": [
+        "862",
+        "2640",
+        "1556",
+        "373",
+        "478",
+        "559"
+    ],
+    "club_id": "740"
+}

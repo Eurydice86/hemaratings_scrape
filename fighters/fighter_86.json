@@ -1,0 +1,33 @@
+{
+    "id": "86",
+    "name": "Maria Makarova",
+    "nationality": "United Kingdom",
+    "categories": [
+        "Longsword (Mixed & Men's, Steel)",
+        "Longsword (Underrepresented Genders & Women's, Steel)",
+        "Longsword (Women's, Steel)",
+        "Rapier and Dagger (Mixed, Steel)",
+        "Sabre (Mixed & Men's, Steel)",
+        "Sidesword (Mixed, Steel)",
+        "Single Rapier (Mixed, Steel)"
+    ],
+    "ratings": [
+        "1311.4",
+        "1421.2",
+        "1421.2",
+        "1172.8",
+        "739.7",
+        "1248.5",
+        "1176.8"
+    ],
+    "rankings": [
+        "1614",
+        "105",
+        "89",
+        "632",
+        "2422",
+        "245",
+        "745"
+    ],
+    "club_id": "6"
+}

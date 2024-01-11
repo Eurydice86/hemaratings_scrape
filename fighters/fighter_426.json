@@ -1,0 +1,27 @@
+{
+    "id": "426",
+    "name": "Sam Street",
+    "nationality": "United States",
+    "categories": [
+        "Longsword (Mixed & Men's, Nylon)",
+        "Longsword (Mixed & Men's, Steel)",
+        "Sabre (Mixed & Men's, Steel)",
+        "Singlestick (Mixed)",
+        "Sword and Buckler (Mixed, Steel)"
+    ],
+    "ratings": [
+        "1360.8",
+        "1572.2",
+        "1243.6",
+        "1572.6",
+        "1270.4"
+    ],
+    "rankings": [
+        "96",
+        "266",
+        "754",
+        "31",
+        "521"
+    ],
+    "club_id": "1595"
+}

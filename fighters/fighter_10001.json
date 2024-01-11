@@ -1,0 +1,24 @@
+{
+    "id": "10001",
+    "name": "Michael Tucker",
+    "nationality": "United States",
+    "categories": [
+        "Longsword (Mixed & Men's, Steel)",
+        "Sabre (Mixed & Men's, Steel)",
+        "Singlestick (Mixed)",
+        "Sword and Buckler (Mixed, Steel)"
+    ],
+    "ratings": [
+        "1445.5",
+        "1192.6",
+        "796.8",
+        "948.9"
+    ],
+    "rankings": [
+        "748",
+        "921",
+        "697",
+        "1426"
+    ],
+    "club_id": "1345"
+}

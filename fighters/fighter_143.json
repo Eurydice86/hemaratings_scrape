@@ -1,0 +1,30 @@
+{
+    "id": "143",
+    "name": "Tanya Smith",
+    "nationality": "United States",
+    "categories": [
+        "Longsword (Mixed & Men's, Steel)",
+        "Longsword (Underrepresented Genders & Women's, Steel)",
+        "Longsword (Women's, Steel)",
+        "Rapier and Dagger (Mixed, Steel)",
+        "Single Rapier (Mixed, Steel)",
+        "Sword and Buckler (Mixed, Steel)"
+    ],
+    "ratings": [
+        "1027.2",
+        "1344.6",
+        "1277.2",
+        "898.4",
+        "1062.9",
+        "766"
+    ],
+    "rankings": [
+        "4607",
+        "168",
+        "198",
+        "1300",
+        "1056",
+        "1891"
+    ],
+    "club_id": "388"
+}

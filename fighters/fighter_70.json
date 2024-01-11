@@ -1,0 +1,30 @@
+{
+    "id": "70",
+    "name": "Michel Rensen",
+    "nationality": "Netherlands",
+    "categories": [
+        "Longsword (Mixed & Men's, Steel)",
+        "Sabre (Mixed & Men's, Steel)",
+        "Sidesword (Mixed, Steel)",
+        "Single Rapier (Mixed, Steel)",
+        "Singlestick (Mixed)",
+        "Sword and Buckler (Mixed, Steel)"
+    ],
+    "ratings": [
+        "1809.9",
+        "1088.4",
+        "1226.2",
+        "885.2",
+        "1629.6",
+        "1089.9"
+    ],
+    "rankings": [
+        "28",
+        "1298",
+        "274",
+        "1542",
+        "14",
+        "1008"
+    ],
+    "club_id": "12"
+}

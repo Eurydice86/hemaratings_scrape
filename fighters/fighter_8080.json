@@ -1,0 +1,33 @@
+{
+    "id": "8080",
+    "name": "Tamara Selge",
+    "nationality": "Australia",
+    "categories": [
+        "Longsword (Mixed & Men's, Steel)",
+        "Longsword (Underrepresented Genders & Women's, Steel)",
+        "Longsword (Women's, Steel)",
+        "Sabre (Mixed & Men's, Steel)",
+        "Sidesword (Mixed, Steel)",
+        "Single Rapier (Mixed, Steel)",
+        "Sword and Buckler (Mixed, Steel)"
+    ],
+    "ratings": [
+        "1223.9",
+        "1586",
+        "1586",
+        "1239.2",
+        "1043.7",
+        "1108.4",
+        "1225.1"
+    ],
+    "rankings": [
+        "2359",
+        "37",
+        "31",
+        "767",
+        "496",
+        "921",
+        "623"
+    ],
+    "club_id": "591"
+}

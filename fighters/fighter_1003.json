@@ -1,0 +1,30 @@
+{
+    "id": "1003",
+    "name": "Aaron Caldarella",
+    "nationality": "Italy",
+    "categories": [
+        "Longsword (Mixed & Men's, Steel)",
+        "Rapier and Dagger (Mixed, Steel)",
+        "Sabre (Mixed & Men's, Steel)",
+        "Sidesword (Mixed, Steel)",
+        "Single Rapier (Mixed, Steel)",
+        "Sword and Buckler (Mixed, Steel)"
+    ],
+    "ratings": [
+        "1300.8",
+        "932.3",
+        "1078.7",
+        "1198.8",
+        "1226.7",
+        "1283"
+    ],
+    "rankings": [
+        "1710",
+        "1212",
+        "1334",
+        "297",
+        "611",
+        "486"
+    ],
+    "club_id": "203"
+}

@@ -1,0 +1,33 @@
+{
+    "id": "192",
+    "name": "Christoffer Warelius",
+    "nationality": "Finland",
+    "categories": [
+        "Longsword (Mixed & Men's, Steel)",
+        "Rapier and Dagger (Mixed, Steel)",
+        "Sabre (Mixed & Men's, Steel)",
+        "Sidesword (Mixed, Steel)",
+        "Single Rapier (Mixed, Steel)",
+        "Singlestick (Mixed)",
+        "Sword and Buckler (Mixed, Steel)"
+    ],
+    "ratings": [
+        "1125.2",
+        "906.7",
+        "1200.3",
+        "1226.2",
+        "936.2",
+        "1326.6",
+        "1199.2"
+    ],
+    "rankings": [
+        "3420",
+        "1279",
+        "895",
+        "273",
+        "1402",
+        "134",
+        "694"
+    ],
+    "club_id": "2"
+}

@@ -1,0 +1,30 @@
+{
+    "id": "444",
+    "name": "Walker Skaggs",
+    "nationality": "United States",
+    "categories": [
+        "Longsword (Mixed & Men's, Nylon)",
+        "Longsword (Mixed & Men's, Steel)",
+        "Rapier and Dagger (Mixed, Steel)",
+        "Sabre (Mixed & Men's, Steel)",
+        "Single Rapier (Mixed, Steel)",
+        "Sword and Buckler (Mixed, Steel)"
+    ],
+    "ratings": [
+        "1201.1",
+        "1284.7",
+        "1251.9",
+        "1307.6",
+        "1221.8",
+        "1087.5"
+    ],
+    "rankings": [
+        "285",
+        "1833",
+        "463",
+        "558",
+        "622",
+        "1021"
+    ],
+    "club_id": "807"
+}
