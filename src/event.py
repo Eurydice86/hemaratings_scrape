@@ -83,7 +83,7 @@ def event(link):
         "participants": final_participants,
     }
 
-    filename = "./events/event_" + event_id + ".json"
+    filename = "data/events/event_" + event_id + ".json"
     with open(filename, "w") as file:
         json.dump(event, file, indent=4)
 

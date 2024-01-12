@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-import event
+from src import event
 
 
 def events():
@@ -11,8 +11,9 @@ def events():
     table = events_soup.find("div", id="main")
     column_names = table.find_all("div", class_="panel-body")
 
+    print("Scraping event list")
     for i, c in enumerate(column_names):
-        print(f"{i+1} of {len(column_names)}")
+        print(f"{100 * (i/len(column_names)):2.2f}% completed.", end="\r")
         link = c.find("a", href=True)["href"]
         event.event(link)
 

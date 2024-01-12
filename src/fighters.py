@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-import fighter
+from src import fighter
 
 
 def fighters():
@@ -12,11 +12,11 @@ def fighters():
 
     ftrs_table = sp.find("table", id="mainTable")
     ftrs = ftrs_table.find_all("a", href=True)
+    print("Scraping fighter list")
     for i, f in enumerate(ftrs):
         fighter_id = f["href"]
         if fighter_id.split("/")[1] == "fighters":
-            print(int(i / 2) + 1, int(len(ftrs) / 2))
-            # print(f.text.strip(), fighter_id)
+            print(f"{100 * (i/len(ftrs)):2.2f}% completed.", end="\r")
             fighter.fighter(fighter_id)
 
 

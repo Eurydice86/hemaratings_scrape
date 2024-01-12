@@ -64,7 +64,7 @@ def fighter(link):
         "club_id": club_id,
     }
 
-    filename = "./fighters/fighter_" + fighter_id + ".json"
+    filename = "data/fighters/fighter_" + fighter_id + ".json"
     with open(filename, "w") as file:
         json.dump(fighter, file, indent=4)
 

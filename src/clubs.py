@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-import club
+from src import club
 
 
 def clubs():
@@ -10,8 +10,10 @@ def clubs():
 
     table = clubs_soup.find("table", id="mainTable")
     data = table.find_all("a", href=True)
+
+    print("Scraping club list")
     for i, d in enumerate(data):
-        print(f"{i+1} of {len(data)}")
+        print(f"{100 * (i/len(data)):2.2f}% completed.", end="\r")
         link = d["href"]
         club.club(link)
 

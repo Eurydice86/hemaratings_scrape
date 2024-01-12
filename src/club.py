@@ -48,7 +48,7 @@ def club(link):
         "city": city,
     }
 
-    filename = "./clubs/club_" + club_id + ".json"
+    filename = "data/clubs/club_" + club_id + ".json"
     with open(filename, "w") as file:
         json.dump(club, file, indent=4)
 
