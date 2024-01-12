@@ -22,7 +22,7 @@ def main():
     print()
     print("~~~~~~~~~~~~~~~~~~~~~~~~")
     print()
-    
+
     shutil.rmtree("data")
     os.mkdir("data")
     os.mkdir("data/fighters")
