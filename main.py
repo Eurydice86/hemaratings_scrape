@@ -23,11 +23,11 @@ def main():
     print("~~~~~~~~~~~~~~~~~~~~~~~~")
     print()
 
-    shutil.rmtree("data")
-    os.mkdir("data")
-    os.mkdir("data/fighters")
-    os.mkdir("data/clubs")
-    os.mkdir("data/events")
+    if not os.path.exists("data"):
+        os.mkdir("data")
+        os.mkdir("data/fighters")
+        os.mkdir("data/clubs")
+        os.mkdir("data/events")
 
     clubs.clubs()
     print("Club scraping completed.")

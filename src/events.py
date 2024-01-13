@@ -6,7 +6,7 @@ from src import event
 
 def events():
     events = requests.get("https://hemaratings.com/events/")
-    events_soup = BeautifulSoup(events.text, "lxml")
+    events_soup = BeautifulSoup(events.text, features="html.parser")
 
     table = events_soup.find("div", id="main")
     column_names = table.find_all("div", class_="panel-body")

@@ -15,7 +15,7 @@ def club(link):
     city = ""
 
     page = requests.get(full_url)
-    soup = BeautifulSoup(page.text, "lxml")
+    soup = BeautifulSoup(page.text, features="html.parser")
 
     name_sp = soup.find("h2")
     name = name_sp.text.strip().split("\n")[0].split("\r")[0].strip()

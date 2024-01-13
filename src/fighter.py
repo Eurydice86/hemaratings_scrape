@@ -13,7 +13,7 @@ def fighter(link):
     full_url = "https://hemaratings.com" + link
 
     page = requests.get(full_url)
-    soup = BeautifulSoup(page.text, "lxml")
+    soup = BeautifulSoup(page.text, features="html.parser")
 
     sp = soup.find("div", id="main")
     fighter_name = sp.find("h2").text.strip()
