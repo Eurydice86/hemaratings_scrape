@@ -1,0 +1,10 @@
+#+Title: Hemaratings Scraper
+
+* About
+The script scrapes hemaratings.com, specifically the lists of events, clubs and fighters, and saves the information locally in files; one file for each event, club and fighter.
+
+* Installation of dependencies
+1. Clone the repository locally via https (=git clone https://Eurydice86/hemaratings_scrape=) or ssh (=git clone git@github.com:Eurydice86/hemaratings_scrape.git=)
+2. Install the dependencies (=pip install -r requirements.txt=). You might want to create a virtual environment (=python -m venv <name>=) and activate it first.
+* Usage
+3. Run the script with =python main.py=
