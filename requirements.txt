@@ -1,6 +1,4 @@
 requests
 bs4
 numpy
-wheel
-cchardet
 lxml
