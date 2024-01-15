@@ -1,7 +1,7 @@
 #+Title: Hemaratings Scraper
 
 * About
-The script scrapes hemaratings.com, specifically the lists of /events/, /clubs/ and /fighters, and saves the information locally in files; one file for each /event/, /club/ and /fighter/.
+The script scrapes hemaratings.com, specifically the lists of /events/, /clubs/ and /fighters/, and saves the information locally in files; one file for /events/, one for /clubs/, one for /fighters/ and one for /ratings/.
 
 * Installation of dependencies
 1. Clone the repository locally via https (=git clone https://Eurydice86/hemaratings_scrape=) or ssh (=git clone git@github.com:Eurydice86/hemaratings_scrape.git=)
