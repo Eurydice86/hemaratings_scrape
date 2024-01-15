@@ -8,7 +8,8 @@ def fighters():
     """Goes through the 'fighters' page on Hemaratings and calls the fighter
     function for each of the fighters on the list"""
     events = requests.get("https://hemaratings.com/fighters/")
-    sp = BeautifulSoup(events.text, features="html.parser")
+    # sp = BeautifulSoup(events.text, features="html.parser")
+    sp = BeautifulSoup(events.text, "lxml")
 
     ftrs_table = sp.find("table", id="mainTable")
     ftrs = ftrs_table.find_all("a", href=True)

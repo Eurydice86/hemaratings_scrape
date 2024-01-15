@@ -1,6 +1,6 @@
 import json
 
-import numpy as np
+# import numpy as np
 import requests
 from bs4 import BeautifulSoup
 
@@ -15,7 +15,7 @@ def club(link):
     city = ""
 
     page = requests.get(full_url)
-    soup = BeautifulSoup(page.text, features="html.parser")
+    soup = BeautifulSoup(page.text, features="lxml")
 
     name_sp = soup.find("h2")
     name = name_sp.text.strip().split("\n")[0].split("\r")[0].strip()
@@ -39,6 +39,8 @@ def club(link):
         state = info[2]
         city = info[4]
     """
+
+    """
     club = {
         "id": club_id,
         "name": name,
@@ -51,8 +53,11 @@ def club(link):
     filename = "data/clubs/club_" + club_id + ".json"
     with open(filename, "w") as file:
         json.dump(club, file, indent=4)
-
+    """
     # print(json.dumps(club, indent=4))
+    file_out = open("data/clubs.dat", "a")
+    file_out.write(f"{club_id}\t{name}\t{short_name}\t{country}\t{state}\t{city}\n")
+    file_out.close()
 
 
 if __name__ == "__main__":

@@ -1,5 +1,4 @@
 import os
-import shutil
 
 from src import clubs, events, fighters
 
@@ -7,11 +6,11 @@ from src import clubs, events, fighters
 def clear():
     # for windows
     if os.name == "nt":
-        _ = os.system("cls")
+        os.system("cls")
 
     # for mac and linux(here, os.name is 'posix')
     else:
-        _ = os.system("clear")
+        os.system("clear")
 
 
 def main():

@@ -11,7 +11,8 @@ def event(link):
     event_id = link.split("/")[-2]
     full_url = "https://hemaratings.com" + link
     page = requests.get(full_url)
-    soup = BeautifulSoup(page.text, features="html.parser")
+    # soup = BeautifulSoup(page.text, features="html.parser")
+    soup = BeautifulSoup(page.text, features="lxml")
 
     sp = soup.find("div", id="main")
     event_name = sp.find("h2").text.strip()
@@ -72,6 +73,7 @@ def event(link):
         print(p)
     """
 
+    """
     event = {
         "id": event_id,
         "name": event_name,
@@ -82,10 +84,14 @@ def event(link):
         "categories": final_categories,
         "participants": final_participants,
     }
+    """
 
-    filename = "data/events/event_" + event_id + ".json"
-    with open(filename, "w") as file:
-        json.dump(event, file, indent=4)
+    # filename = "data/events/event_" + event_id + ".json"
+    # with open(filename, "w") as file:
+    #    json.dump(event, file, indent=4)
+    file_out = open("data/events.dat", "a")
+    file_out.write(f"{event_id}\t{event_name}\t{date}\t{country}\t{state}\t{city}\n")
+    file_out.close()
 
 
 if __name__ == "__main__":
