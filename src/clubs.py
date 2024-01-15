@@ -6,7 +6,7 @@ from src import club
 
 def clubs():
     clubs = requests.get("https://hemaratings.com/clubs/")
-    clubs_soup = BeautifulSoup(clubs.text, features="html.parser")
+    clubs_soup = BeautifulSoup(clubs.text, features="lxml")
 
     table = clubs_soup.find("table", id="mainTable")
     data = table.find_all("a", href=True)
