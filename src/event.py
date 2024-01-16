@@ -48,8 +48,8 @@ def event(link):
 
     date = metadata[0]
     country = metadata[1].strip()
-    state = ""
-    city = ""
+    state = "-"
+    city = "-"
     if len(metadata) == 3:
         city = metadata[2].strip()
     if len(metadata) == 4:

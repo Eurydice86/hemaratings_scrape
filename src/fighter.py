@@ -67,7 +67,7 @@ def fighter(link):
     dummy = sp.find_all("a", href=True)[0]
     club_id = dummy["href"].split("/")[-2]
 
-    nationality = ""
+    nationality = "-"
     if sp.find("i"):
         nationality = sp.find("i")["title"]
 
