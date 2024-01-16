@@ -28,7 +28,7 @@ def category_name_to_id(name):
 
 
 def which_weapons(categories, ratings, rankings, fighter):
-    file_out = open("data/ratings.dat", "a")
+    file_out = open("data/ratings.csv", "a")
 
     for i in range(len(categories)):
         pass
@@ -37,7 +37,7 @@ def which_weapons(categories, ratings, rankings, fighter):
         category_id = category_name_to_id(categories[i])
         rating = ratings[i]
         ranking = rankings[i]
-        file_out.write(f"{category_id}\t{fighter}\t{rating}\t{ranking}\n")
+        file_out.write(f"{category_id},{fighter},{rating},{ranking}\n")
 
     file_out.close()
 
@@ -103,7 +103,7 @@ def fighter(link):
     }
     """
 
-    out_file = open("data/fighters.dat", "a")
+    out_file = open("data/fighters.csv", "a")
     out_file.write(f"{fighter_id},{fighter_name},{nationality},{club_id}\n")
     out_file.close()
 

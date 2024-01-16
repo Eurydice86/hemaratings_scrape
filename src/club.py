@@ -52,7 +52,7 @@ def club(link):
         json.dump(club, file, indent=4)
     """
 
-    file_out = open("data/clubs.dat", "a")
+    file_out = open("data/clubs.csv", "a")
     file_out.write(f"{club_id},{name},{short_name},{country},{state},{city}\n")
     file_out.close()
 
