@@ -85,7 +85,7 @@ def event(link):
     """
 
     file_out = open("data/events.csv", "a")
-    file_out.write(f"{event_id},{event_name},{date},{country},{state},{city}\n")
+    file_out.write(f"{event_id};{event_name};{date};{country};{state};{city}\n")
     file_out.close()
 
 

@@ -53,7 +53,7 @@ def club(link):
     """
 
     file_out = open("data/clubs.csv", "a")
-    file_out.write(f"{club_id},{name},{short_name},{country},{state},{city}\n")
+    file_out.write(f"{club_id};{name};{short_name};{country};{state};{city}\n")
     file_out.close()
 
 
