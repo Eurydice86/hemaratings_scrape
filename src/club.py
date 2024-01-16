@@ -1,6 +1,3 @@
-import json
-
-# import numpy as np
 import requests
 from bs4 import BeautifulSoup
 
@@ -54,9 +51,9 @@ def club(link):
     with open(filename, "w") as file:
         json.dump(club, file, indent=4)
     """
-    # print(json.dumps(club, indent=4))
+
     file_out = open("data/clubs.dat", "a")
-    file_out.write(f"{club_id}\t{name}\t{short_name}\t{country}\t{state}\t{city}\n")
+    file_out.write(f"{club_id},{name},{short_name},{country},{state},{city}\n")
     file_out.close()
 
 

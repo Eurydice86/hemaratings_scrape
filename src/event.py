@@ -1,5 +1,3 @@
-import json
-
 import numpy as np
 import requests
 from bs4 import BeautifulSoup
@@ -86,11 +84,8 @@ def event(link):
     }
     """
 
-    # filename = "data/events/event_" + event_id + ".json"
-    # with open(filename, "w") as file:
-    #    json.dump(event, file, indent=4)
     file_out = open("data/events.dat", "a")
-    file_out.write(f"{event_id}\t{event_name}\t{date}\t{country}\t{state}\t{city}\n")
+    file_out.write(f"{event_id},{event_name},{date},{country},{state},{city}\n")
     file_out.close()
 
 

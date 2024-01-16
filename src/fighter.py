@@ -1,5 +1,3 @@
-import json
-
 import numpy as np
 import requests
 from bs4 import BeautifulSoup
@@ -105,12 +103,9 @@ def fighter(link):
     }
     """
 
-    # print(json.dumps(fighter, indent=4))
-    # filename = "data/fighters/fighter_" + fighter_id + ".json"
-    # with open(filename, "w") as file:
-    #    json.dump(fighter, file, indent=4)
     out_file = open("data/fighters.dat", "a")
-    out_file.write(f"{fighter_id}\t{fighter_name}\t{nationality}\t{club_id}\n")
+    out_file.write(f"{fighter_id},{fighter_name},{nationality},{club_id}\n")
+    out_file.close()
 
 
 if __name__ == "__main__":
