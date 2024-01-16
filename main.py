@@ -16,8 +16,7 @@ def clear():
 def main():
     clear()
     print("The program will scrape the lists of clubs, events and fighters")
-    print("and write the info into json files in a 'data' directory")
-    print("(one file for each fighter, club and event).")
+    print("and write the info into files in a 'data' directory.")
     print()
     print("~~~~~~~~~~~~~~~~~~~~~~~~")
     print()
