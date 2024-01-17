@@ -83,10 +83,7 @@ def event(link):
         "participants": final_participants,
     }
     """
-
-    file_out = open("data/events.csv", "a")
-    file_out.write(f"{event_id};{event_name};{date};{country};{state};{city}\n")
-    file_out.close()
+    return f"{event_id};{event_name};{date};{country};{state};{city}\n"
 
 
 if __name__ == "__main__":
