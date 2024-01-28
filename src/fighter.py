@@ -31,9 +31,6 @@ def which_weapons(categories, ratings, rankings, fighter):
     file_out = open("data/ratings.csv", "a")
 
     for i in range(len(categories)):
-        pass
-        # check category name and make an entry in the ratings table
-        # something like "if name is LS steel mixed"
         category_id = category_name_to_id(categories[i])
         rating = ratings[i]
         ranking = rankings[i]
