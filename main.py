@@ -36,13 +36,16 @@ def main():
 
     clubs.clubs()
     print("Club scraping completed.")
+
     events.events()
     print("Event scraping completed.")
+
     fighters.fighters()
     print("Fighters scraping completed.")
 
     rankings.rankings()
     print()
+
     print("Scrape complete.")
 
 

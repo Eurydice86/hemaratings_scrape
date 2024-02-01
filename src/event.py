@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def event(link):
+def event(link, year):
     final_categories = []
     final_participants = []
     event_id = link.split("/")[-2]
@@ -57,33 +57,7 @@ def event(link):
         country = metadata[1].strip()
         city = metadata[3].strip()
 
-    """
-    print("Event id:", event_id)
-    print("Event name:", event_name)
-    print("Date:", date)
-    print("Country:", country)
-    print("City:", city)
-    print("Categories")
-    for cat in final_categories:
-        print(cat)
-    print("Participants")
-    for p in final_participants:
-        print(p)
-    """
-
-    """
-    event = {
-        "id": event_id,
-        "name": event_name,
-        "date": date,
-        "country": country,
-        "state": state,
-        "city": city,
-        "categories": final_categories,
-        "participants": final_participants,
-    }
-    """
-    return f"{event_id};{event_name};{date};{country};{state};{city}\n"
+    return f"{event_id};{event_name};{date};{year};{country};{state};{city}\n"
 
 
 if __name__ == "__main__":
