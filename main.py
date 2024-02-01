@@ -16,7 +16,7 @@ def clear():
 
 def main():
     clear()
-    print("The program will scrape the lists of clubs, events and fighters")
+    print("The program will scrape the lists of clubs, events, fighters and rankings")
     print("and write the info into files in a 'data' directory.")
     print()
     print("~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -31,7 +31,7 @@ def main():
     fighters_file.close()
 
     ratings_file = open("data/ratings.csv", "w")
-    ratings_file.write("category_id;fighter_id;weighted_rating;deviation;active")
+    ratings_file.write("category_id;fighter_id;weighted_rating;deviation;active\n")
     ratings_file.close()
 
     clubs.clubs()
