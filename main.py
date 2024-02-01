@@ -1,7 +1,7 @@
 import os
 import shutil
 
-from src import clubs, events, fighters
+from src import clubs, events, fighters, rankings
 
 
 def clear():
@@ -24,13 +24,14 @@ def main():
 
     if os.path.exists("data"):
         shutil.rmtree("data")
-
     os.mkdir("data")
+
     fighters_file = open("data/fighters.csv", "w")
     fighters_file.write("fighter_id;fighter_name;nationality;club_id\n")
     fighters_file.close()
+
     ratings_file = open("data/ratings.csv", "w")
-    ratings_file.write("category_id;fighter;rating;ranking\n")
+    ratings_file.write("category_id;fighter_id;weighted_rating;deviation;active")
     ratings_file.close()
 
     clubs.clubs()
@@ -38,6 +39,9 @@ def main():
     events.events()
     print("Event scraping completed.")
     fighters.fighters()
+    print("Fighters scraping completed.")
+
+    rankings.rankings()
     print()
     print("Scrape complete.")
 

@@ -1,0 +1,36 @@
+| Event    |
+|----------|
+| event_id |
+| name     |
+| country  |
+| city     |
+| date     |
+
+| Competition    |
+|----------------|
+| competition_id |
+| event_id       |
+| weapon         |
+
+
+| Fighter     |
+|-------------|
+| fighter_id  |
+| name        |
+| nationality |
+| club_id     |
+
+| Club    |
+|---------|
+| club_id |
+| name    |
+| country |
+| state   |
+| city    |
+
+| Rating          |
+|-----------------|
+| category_id     |
+| fighter_id      |
+| weighted_rating |
+| deviation       |
