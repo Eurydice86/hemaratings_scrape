@@ -21,9 +21,14 @@ def fighter(link):
     if sp.find("i"):
         nationality = sp.find("i")["title"]
 
-    out_file = open("data/fighters.csv", "a")
-    out_file.write(f"{fighter_id};{fighter_name};{nationality};{club_id}\n")
-    out_file.close()
+    fighter_dict = {
+        "fighter_id": fighter_id,
+        "name": fighter_name,
+        "nationality": nationality,
+        "club_id": club_id,
+    }
+
+    return fighter_dict
 
 
 if __name__ == "__main__":

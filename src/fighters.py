@@ -1,3 +1,4 @@
+import csv
 import requests
 from bs4 import BeautifulSoup
 
@@ -14,11 +15,19 @@ def fighters():
     ftrs_table = sp.find("table", id="mainTable")
     ftrs = ftrs_table.find_all("a", href=True)
     print("Scraping fighter list")
-    for i, f in enumerate(ftrs):
-        fighter_id = f["href"]
-        if fighter_id.split("/")[1] == "fighters":
-            print(f"{100 * (i/len(ftrs)):2.2f}% completed.", end="\r")
-            fighter.fighter(fighter_id)
+
+    with open("data/fighters.csv", "w", newline="") as fighters_csv:
+        fieldnames = ["fighter_id", "name", "nationality", "club_id"]
+
+        writer = csv.DictWriter(fighters_csv, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for i, f in enumerate(ftrs):
+            fighter_id = f["href"]
+            if fighter_id.split("/")[1] == "fighters":
+                print(f"{100 * (i/len(ftrs)):2.2f}% completed.", end="\r")
+                line = fighter.fighter(fighter_id)
+                writer.writerow(line)
 
 
 if __name__ == "__main__":
