@@ -57,7 +57,17 @@ def event(link, year):
         country = metadata[1].strip()
         city = metadata[3].strip()
 
-    return f"{event_id};{event_name};{date};{year};{country};{state};{city}\n"
+    event_dict = {
+        "event_id": event_id,
+        "event_name": event_name,
+        "date": date,
+        "year": year,
+        "country": country,
+        "state": state,
+        "city": city,
+    }
+
+    return event_dict
 
 
 if __name__ == "__main__":

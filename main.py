@@ -26,14 +26,6 @@ def main():
         shutil.rmtree("data")
     os.mkdir("data")
 
-    fighters_file = open("data/fighters.csv", "w")
-    fighters_file.write("fighter_id;fighter_name;nationality;club_id\n")
-    fighters_file.close()
-
-    ratings_file = open("data/ratings.csv", "w")
-    ratings_file.write("category_id;fighter_id;weighted_rating;deviation;active\n")
-    ratings_file.close()
-
     clubs.clubs()
     print("Club scraping completed.")
 
@@ -44,6 +36,7 @@ def main():
     print("Fighters scraping completed.")
 
     rankings.rankings()
+    print("Rankings scraping completed.")
     print()
 
     print("Scrape complete.")
