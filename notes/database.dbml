@@ -1,5 +1,4 @@
-// Use DBML to define your database structure
-// Docs: https://dbml.dbdiagram.io/docs
+// visualiser at dbdiagram.io
 
 Table events {
   event_id integer [primary key]
