@@ -1,3 +1,4 @@
+import csv
 import requests
 from bs4 import BeautifulSoup
 
@@ -9,6 +10,7 @@ def ranking(category):
     page = requests.get(category)
     sp = BeautifulSoup(page.text, "lxml")
     table = sp.find("table", id="mainTable")
+
     table = table.find("tbody")
     rows = table.find_all("tr")
 
