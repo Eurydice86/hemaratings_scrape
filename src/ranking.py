@@ -1,4 +1,3 @@
-import csv
 import requests
 from bs4 import BeautifulSoup
 
@@ -20,7 +19,7 @@ def ranking(category):
         weighted_rating = r.find_all("span")[1].text
         deviation_list = r.find_all("i")[-1]["title"].split("(")
         deviation = deviation_list[-1].strip(")")
-        active = not deviation_list[0].strip() == "Inactive"
+        active = "Inactive" if deviation_list[0].strip() == "Inactive" else "Active"
 
         ranking_dict = {
             "category_id": category_id,
