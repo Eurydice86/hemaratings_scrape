@@ -2,10 +2,14 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def ranking(category):
+def ranking(category, month=0, year=0):
     rankings_list = []
 
     category_id = category.split("=")[-1]
+    if int(month) != 0 and int(year) != 0:
+        category += f"&year={year}&month={int(month)}"
+    print(category)
+
     page = requests.get(category)
     sp = BeautifulSoup(page.text, "lxml")
     table = sp.find("table", id="mainTable")
@@ -35,4 +39,4 @@ def ranking(category):
 
 
 if __name__ == "__main__":
-    ranking("https://hemaratings.com/Periods/Details/?ratingsetid=12")
+    ranking("https://hemaratings.com/periods/details/?ratingsetid=12", 2, 2023)

@@ -5,10 +5,13 @@ from bs4 import BeautifulSoup
 from src import ranking
 
 
-def rankings():
+def rankings(month=0, year=0):
     """Goes through the 'rankings' page on Hemaratings and calls the ranking
     function for each of the categories"""
 
+    ratings_filename = "data/ratings.csv"
+    if month != 0 and year != 0:
+        ratings_filename = f"data/ratings_{year}_{int(month):02}.csv"
     page = requests.get("https://hemaratings.com/")
     sp = BeautifulSoup(page.text, "lxml")
 
@@ -21,7 +24,7 @@ def rankings():
         c_writer = csv.DictWriter(categories_csv, fieldnames=c_fieldnames)
         c_writer.writeheader()
 
-        with open("data/ratings.csv", "w", newline="") as ratings_csv:
+        with open(ratings_filename, "w", newline="") as ratings_csv:
             fieldnames = [
                 "category_id",
                 "fighter_id",
@@ -45,10 +48,10 @@ def rankings():
                 }
 
                 c_writer.writerow(categories_dict)
-                rankings_list = ranking.ranking(link)
+                rankings_list = ranking.ranking(link, month=month, year=year)
                 for line in rankings_list:
                     writer.writerow(line)
 
 
 if __name__ == "__main__":
-    rankings()
+    rankings(1, 2023)
