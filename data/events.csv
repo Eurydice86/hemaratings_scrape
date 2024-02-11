@@ -1,12 +1,18 @@
 event_id,event_name,date,year,country,state,city
+1988,BHL 1 2024,January 28,2024,United States,Massachusetts,Boston
+1981,Gold Coast Classic: Sidesword 2024,January 20,2024,Australia,Queensland,Gold Coast
+1990,V Torneo Ciudad de Coruña de Esgrima Historica 2024,January 20,2024,Spain,-,A Coruña
+1986,Unicorn Cup 2024,January 20,2024,United States,Pennsylvania,Pittsburgh
+1983,Helsinki Longsword Open 2024,January 19,2024,Finland,-,Helsinki
 1980,Žilinský Pun(k)c 2024,January 13,2024,Slovakia,-,Žilina
 1976,HEMA Riga Singlestick Open 2023,December 16,2023,Latvia,-,Riga
 1974,Baja Regional 2023,December 9,2023,Mexico,-,Tijuana
 1971,Basilisk Cup 2023,December 9,2023,Poland,-,Warsaw
 1967,Boston Hema League December 2023,December 3,2023,United States,Massachusetts,Boston
+1982,Torneio Nacional de Esgrima Histórica 2023,December 3,2023,Brazil,Rio de Janeiro,Rio de Janeiro
+1972,Sonata di Spada 2023,December 2,2023,Germany,-,Ulm
 1969,Swordplay Serbia 2023,December 2,2023,Serbia,-,Belgrade
 1973,Winter Ring 2023,December 2,2023,United States,Florida,Sarasota
-1972,Sonata di Spada 2023,December 2,2023,Germany,-,Ulm
 1965,AMCF/HEMAA Collaborative Tournament 2023,December 2,2023,United States,Missouri,Kansas City
 1968,Drabant Cup 2023,December 2,2023,Sweden,-,Lund
 1977,The Duelling Arts - Winter Tournament 2023,December 1,2023,Canada,British Columbia,Vancouver
@@ -30,6 +36,7 @@ event_id,event_name,date,year,country,state,city
 1927,The Wrathful Peasants' Super Serious Tournament 2023,November 4,2023,Ireland,-,Feakle
 1926,Sofia CrossSwords 2023,November 4,2023,Bulgaria,-,-
 1924,Krkavcí podzimní fechtík 2023,October 28,2023,Czech Republic,-,Prague
+1987,SLMS 2023,October 28,2023,Austria,-,Salzburg
 1978,Fright Fight 2023,October 27,2023,United States,Arizona,Phoenix
 1958,Krump Pow 2023,October 27,2023,United States,Wisconsin,Appleton
 1930,World Broadsword Cup 2023,October 27,2023,Australia,South Australia,Adelaide

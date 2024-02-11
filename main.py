@@ -1,5 +1,7 @@
 import os
 import shutil
+import argparse
+import sys
 
 from src import clubs, events, fighters, rankings
 
@@ -15,13 +17,19 @@ def clear():
 
 
 def main():
-    clear()
-    print("The program will scrape the lists of clubs, events, fighters and rankings")
-    print("and write the info into files in a 'data' directory.")
-    print()
-    print("~~~~~~~~~~~~~~~~~~~~~~~~")
-    print()
+    parser = argparse.ArgumentParser(
+        description="The program scrapes the lists of clubs, events,\
+        fighters and rankings, and writes the info in a 'data' directory."
+    )
+    parser.add_argument("-f", "--fullhistory", action="store_true")
+    hist_on = parser.parse_args().fullhistory
 
+    clear()
+    print(
+        "The program scrapes the lists of clubs, events, fighters and rankings, and writes the info in a 'data' directory."
+    )
+
+    print("Reconstructing directory structure.")
     if os.path.exists("data"):
         shutil.rmtree("data")
     os.mkdir("data")
@@ -35,7 +43,7 @@ def main():
     fighters.fighters()
     print("Fighters scraping completed.")
 
-    rankings.rankings()
+    rankings.rankings(history=hist_on)
     print("Rankings scraping completed.")
     print()
 

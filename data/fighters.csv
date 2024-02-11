@@ -197,6 +197,7 @@ fighter_id,name,nationality,club_id
 1585,Aindreas Dounyng,United States,303
 12368,Aino Pöykkö,Finland,15
 5068,Airrion Scott,United States,94
+13486,Aisling Henry,Australia,326
 12829,Aislinn MacCulloch,Canada,153
 3456,Aitor Bleda,United Kingdom,244
 4754,Aitor Fernandez Dominguez,Spain,390
@@ -444,6 +445,7 @@ fighter_id,name,nationality,club_id
 688,Alex Meloi,United States,357
 10825,Alex Mendis,Norway,20
 9126,Alex Modotti,Italy,1143
+13496,Alex Muir,Australia,326
 9534,Alex Nikolakakis,United Kingdom,491
 10035,Alex Nishimoto,United States,185
 12244,Alex Nutt,United States,1413
@@ -652,6 +654,7 @@ fighter_id,name,nationality,club_id
 811,Allan Sherlock,United States,925
 13441,Allen Ferraudo,Brazil,645
 745,Allen Mudrovcic,Canada,-
+13472,Allison Butler,United States,283
 10241,Allison Crump,United States,198
 7641,Allison Jacobsen,United States,737
 5530,Allison Kives,United States,116
@@ -1017,7 +1020,7 @@ fighter_id,name,nationality,club_id
 2896,Anna Färnefors,Sweden,5
 6790,Anna Franceschi,Italy,820
 2328,Anna Giretti,Italy,212
-1146,Anna Gorbulinskaja,Russia,125
+1146,Anna Gorbulinskaja,Russia,1357
 5276,Anna Krakiewicz,Poland,248
 88,Anna Lahtinen,Finland,15
 6950,Anna Lavruhina,Russia,835
@@ -1056,6 +1059,7 @@ fighter_id,name,nationality,club_id
 477,Anthony Buonomo,United States,283
 10680,Anthony Calalang,United States,104
 13428,Anthony Ciamacco,United States,70
+13474,Anthony Cortez,United States,283
 9382,Anthony Ditton,Australia,1175
 6282,Anthony Garnier,France,249
 13194,Anthony Ham,Canada,1452
@@ -1185,6 +1189,7 @@ fighter_id,name,nationality,club_id
 8562,Árpád Zsadányi,Hungary,992
 13264,Arrate Corral Bilbao,Spain,710
 11121,Arren Roach,United Kingdom,987
+13487,Arron Leslie-Evans,Australia,196
 6102,Arseni Kritchever,Canada,726
 2476,Arsenii Kalinovich,Russia,156
 8607,Arseniy Marin,Russia,338
@@ -1233,6 +1238,7 @@ fighter_id,name,nationality,club_id
 3320,Asa Walters-Sherriff,Australia,494
 7654,Asaf Ateş Erdoğan,Turkey,544
 5975,Ascander Suarez,United Kingdom,281
+13462,Ash Farnsworth,United States,283
 3099,Ash Marriott,Australia,325
 2873,Ashanti Ziths,United States,43
 10614,Ashlee Leach,Australia,328
@@ -1581,6 +1587,7 @@ fighter_id,name,nationality,club_id
 8504,Bowen Huang,China,-
 12866,Bozhidar Lalev,Bulgaria,1477
 501,Bozhidar Mladenov,United States,120
+13488,Brad Bennets,Australia,326
 6311,Brad Lynn,United States,167
 8388,Brad McPherson,Australia,591
 723,Brad Purrone,United States,166
@@ -1613,6 +1620,7 @@ fighter_id,name,nationality,club_id
 11973,Brandon Green,-,642
 5293,Brandon Hinson,United States,43
 7915,Brandon Hunt,United States,654
+13499,Brandon Ingham,-,-
 7190,Brandon Matherne,United States,116
 8834,Brandon Moorcraft,Australia,328
 9676,Brandon Murray,United States,894
@@ -1708,6 +1716,7 @@ fighter_id,name,nationality,club_id
 8737,Bruce Kimmell,United States,808
 683,Bruce Rawitch,United States,96
 5559,Bruna Gabriela Peixer,Brazil,1050
+13485,Bruno Antonio,Portugal,568
 10165,Bruno de Castro,Brazil,1266
 5540,Bruno de Oliveira,Brazil,1266
 7299,Bruno Majdowski,Poland,502
@@ -2749,6 +2758,7 @@ fighter_id,name,nationality,club_id
 12597,David Russell,United States,1246
 8015,David Schultz,Canada,1012
 8812,David Scruggs,United States,34
+13463,David Silva,United States,283
 2430,David Singalevich,Russia,-
 12048,David Socha,United States,1018
 901,David Spearman,United States,191
@@ -2801,11 +2811,13 @@ fighter_id,name,nationality,club_id
 11905,Dax Erickson,-,-
 9658,Dax Moore,United States,772
 5697,Dayan Dragan,Romania,530
+13489,Dayantha Warnakulasuriya,Australia,591
 134,Dayna Rowden,United States,54
 9616,Dean Aspin,New Zealand,1219
 3306,Dean Collard,Australia,331
 7268,Dean Collis,United States,-
 1243,Dean Flagg,United States,180
+13464,Dean Fountain,United States,283
 10571,Dean Howard,New Zealand,771
 9604,Dean Mischewski,New Zealand,1219
 1059,Deborah Masiero,Italy,209
@@ -3241,6 +3253,7 @@ fighter_id,name,nationality,club_id
 6770,Eleonora Quintavalle,Italy,820
 5700,Eléonore Court,France,221
 2363,Eli Hood,United States,173
+13475,Eli Lasics,United States,108
 11110,Eli Martin,United States,174
 11975,Eli Zev,United States,1256
 6776,Elia Herbst,Italy,817
@@ -3282,6 +3295,7 @@ fighter_id,name,nationality,club_id
 6202,Elizaveta Trosheva,Russia,55
 12669,Ella Rose,United States,1498
 8402,Ella Thiel,United States,46
+13476,Ellen Drott,United States,108
 10724,Ellen Howse,United Kingdom,974
 13378,Elliot Cosgrove,United States,898
 11849,Elliot Fisher,United Kingdom,713
@@ -3417,9 +3431,11 @@ fighter_id,name,nationality,club_id
 11103,Eric Powell,United States,156
 12050,Eric Roge,United States,1412
 8115,Eric Rush,United States,878
+13465,Eric Schweinsberg,United States,283
+13466,Eric Shattuck,United States,1256
 850,Eric Smith,United States,-
 7905,Eric St. Pierre,Canada,977
-11596,Eric Sumner,United States,-
+11596,Eric Sumner,United States,1101
 5301,Eric Tabor,United States,166
 6469,Eric Torraca,United States,83
 9524,Eric Trinchero,Argentina,1210
@@ -3520,6 +3536,7 @@ fighter_id,name,nationality,club_id
 8128,Eva von Negelein,Germany,661
 1570,Eva Wei,Sweden,14
 6231,Evan Avery,United States,735
+13500,Evan Croshaw,-,-
 7919,Evan Fusco,United States,996
 12691,Evan Gaythorpe,United States,80
 8725,Evan Granger,United States,315
@@ -3855,6 +3872,7 @@ fighter_id,name,nationality,club_id
 12246,G Fielder,United States,1429
 13139,Gabe Arroyo,United States,46
 8045,Gabe Hansen,-,108
+13477,Gabe Maurer,United States,283
 13295,Gabe Ryan,United States,89
 7155,Gábor Antali,Hungary,1533
 2285,Gábor Hargitai,Hungary,291
@@ -4147,6 +4165,7 @@ fighter_id,name,nationality,club_id
 5639,Greg Garland,United States,70
 6728,Greg Golter,United States,808
 11777,Greg Josenhans,United States,92
+13478,Greg Keeton,United States,283
 2729,Greg Maginnity,Australia,202
 8531,Greg Reimer,Canada,1075
 3069,Greg Szanto,United Kingdom,475
@@ -4464,6 +4483,7 @@ fighter_id,name,nationality,club_id
 10043,Ian Burgess-Linden,United States,-
 13271,Ian Castillo-Jolly,United States,725
 12693,Ian Claflin,United States,1461
+13501,Ian Cook,United States,93
 11246,Ian Cowen,United States,887
 2990,Ian Craig,United States,92
 914,Ian Crowe,United States,80
@@ -4571,6 +4591,7 @@ fighter_id,name,nationality,club_id
 6572,Imanol de La Iglesia Muriel,Spain,710
 6760,Imke Smeets,Netherlands,8
 6576,Iñaki Bujan Rodriguez,Spain,757
+13484,Ines Duque Lopez,Spain,565
 6838,Inês Nogueira,Portugal,825
 552,Ingela Vretblad,Sweden,4
 11792,Ingmar Laczay,Germany,1381
@@ -4694,6 +4715,7 @@ fighter_id,name,nationality,club_id
 6123,Izabele Aparecida Saorin,Netherlands,12
 9585,Izzy Aly,United States,1217
 2157,J.J. Conlon,United States,700
+13467,J.R. Zambrano,United States,283
 6995,Jaakko Alamikkula,Finland,28
 10802,Jaakko Haapoja,Finland,1296
 542,Jaakko Hirvelä,Finland,16
@@ -4966,7 +4988,7 @@ fighter_id,name,nationality,club_id
 7826,Jan Kolombo,Czech Republic,362
 12126,Jan Kramoliš,Czech Republic,-
 12128,Jan Kroužek,Czech Republic,285
-13400,Jan Kukkamäki,Austria,301
+13400,Jan Kukkamäki,Finland,301
 62,Jan Lund Jepsen,Denmark,18
 9271,Jan Mesarč,Czech Republic,288
 11278,Jan Modráček,Czech Republic,288
@@ -5079,6 +5101,7 @@ fighter_id,name,nationality,club_id
 5275,Jason Winter,-,62
 9058,Jason Woo,United States,1139
 12076,Jason Yeszkonis,United States,1415
+13468,Jason Zamora,United States,1256
 11496,Jasper Baluyut,United States,90
 1638,Jasper Boelsma,Netherlands,38
 2118,Jasper de Koster,Netherlands,8
@@ -5238,6 +5261,7 @@ fighter_id,name,nationality,club_id
 10112,Jeremy Watson,United States,894
 2872,Jeremy Wolf,United States,43
 2732,Jermaine Wong,Australia,324
+13473,Jerod Dunn,United States,887
 12889,Jeroen Aalders,Netherlands,52
 9001,Jeroen de Roeck,Belgium,811
 1804,Jeroen Steurs,Belgium,-
@@ -5258,7 +5282,7 @@ fighter_id,name,nationality,club_id
 582,Jerzy Miklaszewski,Poland,146
 13321,Jerzy Tramer,Poland,1403
 9,Jesper Christiansen,Sweden,5
-6133,Jesper Krogh Lindhardtsen,Denmark,10
+6133,Jesper Krogh Lindhardtsen,Denmark,1470
 10879,Jesper Lentz Olesen,Denmark,18
 3225,Jesper Persson,Sweden,14
 13210,Jesper Sachteleben,Netherlands,-
@@ -5661,6 +5685,7 @@ fighter_id,name,nationality,club_id
 11368,Joonas Valamäki,Finland,2
 1578,Joonas Valtteri Komulainen,Finland,9
 4808,Joost Rutger Meijering,Netherlands,8
+13469,Jordan Allen,United States,283
 3519,Jordan Archuleta,United States,252
 9073,Jordan Divinagracia,United States,90
 8375,Jordan Edwards,United States,164
@@ -5887,6 +5912,7 @@ fighter_id,name,nationality,club_id
 2071,Juán José López,Mexico,370
 8989,Juan Jose Membrives,Spain,390
 8995,Juan Luis García Ortega,Spain,567
+13497,Juan Maddock,Australia,326
 7040,Juan Manuel Muñoz Peña,Spain,879
 11554,Juan Paredes,Peru,-
 9517,Juan Pedro Fisanotti Caminero,Argentina,1203
@@ -6008,6 +6034,7 @@ fighter_id,name,nationality,club_id
 3096,Justin Pelnar,United States,305
 9330,Justin Pinthon,France,1170
 11443,Justin Reimer,United States,93
+13502,Justin Ring,-,-
 9030,Justin Shope,United States,1136
 668,Justin Snyder,United States,159
 7762,Justin Tan,Australia,196
@@ -6385,6 +6412,7 @@ fighter_id,name,nationality,club_id
 1869,Konstantin Zhukov,Russia,630
 3002,Konstantinos Galanis,Greece,227
 5791,Konstantinos Metaxas,Greece,583
+13492,Koosha Ahmadi,Australia,326
 9981,Korban Earles,United States,899
 9346,Kornél Antal Szücs,Hungary,291
 10071,Kornél Kohod,Hungary,291
@@ -6619,6 +6647,7 @@ fighter_id,name,nationality,club_id
 11562,Lennert van Herk,Netherlands,12
 13263,Lennon Zamora Torealba,Spain,757
 11865,Lenny Sim,United Kingdom,61
+13483,Lenore Hellman,United States,283
 10447,Leo Auditorle,United States,878
 6286,Leo Brown,United Kingdom,273
 12238,Leo Dannersmith,United States,737
@@ -6694,6 +6723,7 @@ fighter_id,name,nationality,club_id
 11414,Liam Pogue-Hartwig,United States,382
 12269,Liam Reynolds,-,-
 1793,Liam Richards,Australia,325
+13493,Liam Schofield,Australia,326
 10700,Liam Shaw,New Zealand,1311
 11772,Liam Wheldon,United States,140
 8434,Liang Ren,China,1053
@@ -6734,6 +6764,7 @@ fighter_id,name,nationality,club_id
 5260,Lisa Vitolo,Italy,131
 11522,Lise Goujon,France,1155
 263,Lissa Harris,United States,43
+13490,Liu Xinghuan,Australia,326
 6697,Liu Yuxing,Australia,326
 9428,Liubov Zabolotna,Ukraine,1177
 2705,Liudas Juodzbalys,Lithuania,423
@@ -7442,8 +7473,10 @@ fighter_id,name,nationality,club_id
 8211,Mary McConnell,United States,479
 1714,Mary Mooney,United States,109
 5535,Mary Passman,United States,116
+13479,Mary Racca,United States,894
 6738,Mary Schnupp,United States,318
 9413,Maryna Fedorenko,Ukraine,1021
+13505,Masami Hoshino-Spafford,-,-
 9764,Masao Loublin,United States,996
 6733,Mason Gibbs,United States,163
 6083,Mason Hays,United States,397
@@ -7596,6 +7629,7 @@ fighter_id,name,nationality,club_id
 7448,Matthew Allen,United States,1190
 12636,Matthew Avila,Canada,1023
 10659,Matthew Bach,United States,305
+13503,Matthew Benedict,-,-
 11092,Matthew Bennett,Australia,279
 7236,Matthew Bento,United States,176
 8110,Matthew Biondo,Canada,1457
@@ -8248,7 +8282,7 @@ fighter_id,name,nationality,club_id
 4694,Moritz Hartmann,Austria,231
 11143,Moritz Löschner,Germany,132
 11463,Morris Chen,Canada,381
-11005,Morten Ankerstjerne,Denmark,10
+11005,Morten Ankerstjerne,Denmark,1470
 10883,Morten Wesley Malm,Denmark,924
 2004,Moses Jones,United States,115
 6698,Mosh Hewson,Australia,806
@@ -8759,6 +8793,7 @@ fighter_id,name,nationality,club_id
 5327,Oskar Nylander,Sweden,67
 3230,Oskar Spjuth,Sweden,4
 179,Oskar ter Mors,Netherlands,8
+13498,Oskarn Olsson,Australia,326
 5924,Oskitz Pikabea,Spain,705
 7451,Osmel Mendoza,United States,888
 6843,Otávio Abreu Sipoli,Brazil,826
@@ -8914,6 +8949,7 @@ fighter_id,name,nationality,club_id
 1745,Paul Johnson,United Kingdom,323
 8976,Paul Kane,United Kingdom,39
 411,Paul Kartage,United States,54
+13491,Paul Lawrence,Peru,-
 7421,Paul Markwardt,Germany,132
 10899,Paul Mawdsley,United States,258
 771,Paul Miller,United States,173
@@ -9653,6 +9689,7 @@ fighter_id,name,nationality,club_id
 12746,Robin Pittoors,Belgium,1198
 12113,Robin Pletcher,United States,1408
 423,Robin Price,United States,90
+13494,Robin Ren,Australia,326
 2966,Robin Rombouts,Netherlands,37
 2108,Robin Schlyter,Sweden,14
 12845,Robin Steele,United States,1253
@@ -9706,6 +9743,7 @@ fighter_id,name,nationality,club_id
 7981,Roman Chernigovskich,Russia,640
 4695,Roman Chvojsik,Austria,231
 4762,Roman Cuadrado Cartelle,Spain,566
+13495,Roman Cunci,Australia,326
 6432,Roman Frolov,Canada,1106
 2545,Roman Gornostaev,Russia,342
 11308,Roman Jurko,Czech Republic,655
@@ -9806,6 +9844,7 @@ fighter_id,name,nationality,club_id
 7025,Ruslan Rumyancev,Russia,-
 205,Ruslan Urazbahtin,Russia,58
 2431,Ruslan Verestchagin,Russia,236
+13480,Russel Pryor,United States,283
 6071,Russell Bradley,United States,878
 11093,Russell Forrest,Australia,1175
 8193,Russell Koh Hsien Kwang,Singapore,1029
@@ -9892,6 +9931,7 @@ fighter_id,name,nationality,club_id
 3057,Sam Hughes,Ireland,426
 12816,Sam Infield,United Kingdom,281
 2943,Sam Ive,United Kingdom,475
+13481,Sam Keiser,United States,283
 1704,Sam Kowalski,United States,36
 3620,Sam Lary,United States,173
 9943,Sam Lumsden-Cook,United States,166
@@ -9911,6 +9951,7 @@ fighter_id,name,nationality,club_id
 3615,Sam Yaskovic,United States,358
 11642,Samad Merchant,United States,1371
 655,Samantha Campbell,Canada,152
+13506,Samantha Dittmann,-,-
 11309,Samantha Kabel,United States,1225
 12388,Samantha Karpinski,United States,140
 427,Samantha Miller,United States,54
@@ -10230,7 +10271,7 @@ fighter_id,name,nationality,club_id
 2062,Shane Malone,United States,93
 2182,Shane Meeks,United States,69
 7645,Shane O'Neill,United States,654
-5972,Shane Scallin,United States,598
+5972,Shane Scallin,United States,1498
 3105,Shane Stapleton,Australia,494
 8047,Shane Tolhurst,-,108
 2641,Shanee Nishry,United Kingdom,1153
@@ -10270,9 +10311,11 @@ fighter_id,name,nationality,club_id
 5087,Shih Chang,Taiwan,606
 9760,Shin Shaung Tung,Taiwan,253
 8487,Shiyi Wang,China,1053
+13504,Shiyi Yu,-,-
 8291,ShuHan Zhang,China,602
 8497,Shuhang Tang,China,602
 8506,Shuheng Zhou,China,1057
+13470,Shun Guan,United States,1256
 9020,Shupeng Yao,China,1053
 8289,ShuYan Chung,China,989
 1405,Siavash Rezvani,United States,173
@@ -10425,6 +10468,7 @@ fighter_id,name,nationality,club_id
 7920,Stanley Putnam,United States,777
 11595,Stas Dudin,Russia,-
 964,Steaphen Fick,United States,175
+13471,Steev Clark,United States,283
 2818,Steeve Alusson,France,143
 1554,Stefan Brunner,Netherlands,8
 4697,Stefan Falkensteiner,Austria,550
@@ -11753,6 +11797,7 @@ fighter_id,name,nationality,club_id
 1624,Zach Forbes,United States,46
 8137,Zach Hunt,United States,100
 2655,Zach Pearson,United States,163
+13482,Zach Rich,United States,283
 9070,Zachariah DePartee,United States,176
 730,Zachary Amsden,United States,115
 1598,Zachary Austin,United States,303
