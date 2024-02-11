@@ -16,7 +16,6 @@ def events():
             "event_id",
             "event_name",
             "date",
-            "year",
             "country",
             "state",
             "city",

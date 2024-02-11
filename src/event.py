@@ -46,7 +46,7 @@ def event(link, year):
         if str(r["href"]).split("/")[1] == "fighters":
             final_participants.append(r["href"].split("/")[-2])
 
-    date = metadata[0]
+    date = f"{metadata[0]}, {year}"
     country = metadata[1].strip()
     state = "-"
     city = "-"
@@ -61,7 +61,6 @@ def event(link, year):
         "event_id": event_id,
         "event_name": event_name,
         "date": date,
-        "year": year,
         "country": country,
         "state": state,
         "city": city,

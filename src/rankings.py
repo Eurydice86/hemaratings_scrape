@@ -30,8 +30,7 @@ def rankings(history=False, year=0, month=0):
         with open(ratings_filename, "w", newline="") as ratings_csv:
             fieldnames = [
                 "category_id",
-                "year",
-                "month",
+                "date",
                 "fighter_id",
                 "weighted_rating",
                 "deviation",
