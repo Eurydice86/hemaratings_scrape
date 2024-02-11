@@ -2,13 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def ranking(category, month=0, year=0):
+def ranking(category, year=0, month=0):
     rankings_list = []
 
     category_id = category.split("=")[-1]
     if int(month) != 0 and int(year) != 0:
         category += f"&year={year}&month={int(month)}"
-    print(category)
 
     page = requests.get(category)
     sp = BeautifulSoup(page.text, "lxml")
@@ -27,6 +26,8 @@ def ranking(category, month=0, year=0):
 
         ranking_dict = {
             "category_id": category_id,
+            "year": year,
+            "month": month,
             "fighter_id": fighter_id,
             "weighted_rating": weighted_rating,
             "deviation": deviation,
