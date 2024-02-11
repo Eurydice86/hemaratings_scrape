@@ -4,7 +4,6 @@ Table events {
   event_id integer [primary key]
   event_name char
   date char
-  year int
   country char
   state char
   city char
@@ -26,6 +25,7 @@ Table fighters {
 
 Table ratings {
   category_id integer
+  date char
   fighter_id integer
   weighted_rating float
   deviation float

@@ -9,6 +9,7 @@ def ranking(category, year=0, month=0):
     if int(month) != 0 and int(year) != 0:
         category += f"&year={year}&month={int(month)}"
 
+    date = f"{year}-{month}" 
     page = requests.get(category)
     sp = BeautifulSoup(page.text, "lxml")
     table = sp.find("table", id="mainTable")
@@ -26,8 +27,7 @@ def ranking(category, year=0, month=0):
 
         ranking_dict = {
             "category_id": category_id,
-            "year": year,
-            "month": month,
+            "date": date,
             "fighter_id": fighter_id,
             "weighted_rating": weighted_rating,
             "deviation": deviation,
@@ -40,4 +40,4 @@ def ranking(category, year=0, month=0):
 
 
 if __name__ == "__main__":
-    ranking("https://hemaratings.com/periods/details/?ratingsetid=12", 2, 2023)
+    ranking("https://hemaratings.com/periods/details/?ratingsetid=12", year=2023, month=12)
