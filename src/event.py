@@ -1,3 +1,4 @@
+from datetime import datetime
 import numpy as np
 import requests
 from bs4 import BeautifulSoup
@@ -46,7 +47,14 @@ def event(link, year):
         if str(r["href"]).split("/")[1] == "fighters":
             final_participants.append(r["href"].split("/")[-2])
 
-    date = f"{metadata[0]}, {year}"
+    month_name = metadata[0].split(" ")[0].strip()
+
+    date_object = datetime.strptime(month_name, "%B")
+    month_number = date_object.month
+
+    month_number
+    day = metadata[0].split(" ")[1].strip()
+    date = f"{day}/{month_number}/{year}"
     country = metadata[1].strip()
     state = None
     city = None
@@ -65,9 +73,8 @@ def event(link, year):
         "state": state,
         "city": city,
     }
-
     return event_dict
 
 
 if __name__ == "__main__":
-    event("/events/details/1926/")
+    event("/events/details/1926/", 2023)

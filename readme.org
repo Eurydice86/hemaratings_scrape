@@ -7,7 +7,8 @@ The script scrapes hemaratings.com, specifically the lists of /events/, /clubs/,
 1. Clone the repository locally via https (=git clone https://Eurydice86/hemaratings_scrape=) or ssh (=git clone git@github.com:Eurydice86/hemaratings_scrape.git=)
 2. Install the dependencies (=pip install -r requirements.txt=). You might want to create a virtual environment (=python -m venv <name>=) and activate it first.
 * Usage
-3. Run the script with =python main.py=
+Run =python scrape.py= followed by the appropriate flags, depending on what you want to scrape.
+Run =python scrape.py -h= for help.
 * Known issues
 This is an initial version of the scraper, so it is by no means perfect.
 Currently, it only saves the name and id for /clubs/. Scraping of the rest of the info will be added in the future.

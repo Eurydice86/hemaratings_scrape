@@ -1,6 +1,5 @@
-import os
-import shutil
 import argparse
+import os
 
 from src import clubs, events, fighters, rankings
 
@@ -36,6 +35,7 @@ def main():
     history_on = parser.parse_args().history
 
     clear()
+    print("Initialising...")
 
     if not os.path.exists("data"):
         os.mkdir("data")
@@ -57,7 +57,7 @@ def main():
         print("Rankings scraping completed.")
 
     print()
-    print("Scrape complete.")
+    print(f"Scrape complete.")
 
 
 if __name__ == "__main__":
