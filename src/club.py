@@ -10,6 +10,7 @@ def club(link):
     country = "-"
     state = "-"
     city = "-"
+    parent_club_id = "-"
 
     page = requests.get(full_url)
     soup = BeautifulSoup(page.text, features="lxml")
@@ -19,6 +20,23 @@ def club(link):
     if len(name_sp.text.strip().split("\n")) == 2:
         short_name = name_sp.text.strip().split("\n")[1].split("\r")[0].strip("() ")
 
+    metadata_table = soup.find("table", class_="table table-striped")
+    md_rows = metadata_table.find_all("tr")
+    for r in md_rows:
+        metadata = r.find_all("td")
+
+        if metadata[0].text.strip() == "Country":
+            country = metadata[1].find("i")["title"]
+
+        if metadata[0].text.strip() == "State":
+            state = metadata[1].text.strip()
+
+        if metadata[0].text.strip() == "City":
+            city = metadata[1].text.strip()
+
+        if metadata[0].text.strip() == "Parent club":
+            parent_club_id = metadata[1].find("a")["href"].split("/")[-2]
+
     club_dict = {
         "club_id": club_id,
         "club_name": name,
@@ -26,6 +44,7 @@ def club(link):
         "country": country,
         "state": state,
         "city": city,
+        "parent_club_id": parent_club_id,
     }
 
     return club_dict
@@ -33,3 +52,4 @@ def club(link):
 
 if __name__ == "__main__":
     club("/clubs/details/78/")
+    club("/clubs/details/326/")

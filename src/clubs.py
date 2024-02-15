@@ -21,6 +21,7 @@ def clubs():
             "country",
             "state",
             "city",
+            "parent_club_id",
         ]
 
         writer = csv.DictWriter(clubs_csv, fieldnames=fieldnames)
