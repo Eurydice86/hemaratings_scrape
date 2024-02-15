@@ -13,11 +13,11 @@ def fighter(link):
     fighter_name = sp.find("h2").text.strip()
 
     dummy = sp.find_all("a", href=True)[0]
-    club_id = "-"
+    club_id = None
     if dummy["href"].split("/")[1] == "clubs":
         club_id = dummy["href"].split("/")[-2]
 
-    nationality = "-"
+    nationality = None
     if sp.find("i"):
         nationality = sp.find("i")["title"]
 
