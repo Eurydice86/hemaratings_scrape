@@ -1,4 +1,6 @@
+import calendar
 import requests
+
 from bs4 import BeautifulSoup
 
 
@@ -9,7 +11,8 @@ def ranking(category, year=0, month=0):
     if int(month) != 0 and int(year) != 0:
         category += f"&year={year}&month={int(month)}"
 
-    date = f"{year}-{month}" 
+    month = calendar.month_name[int(month)]
+    date = f"{month} 01, {year}"
     page = requests.get(category)
     sp = BeautifulSoup(page.text, "lxml")
     table = sp.find("table", id="mainTable")
@@ -40,4 +43,6 @@ def ranking(category, year=0, month=0):
 
 
 if __name__ == "__main__":
-    ranking("https://hemaratings.com/periods/details/?ratingsetid=12", year=2023, month=12)
+    ranking(
+        "https://hemaratings.com/periods/details/?ratingsetid=12", year=2023, month=12
+    )

@@ -5,12 +5,12 @@ from bs4 import BeautifulSoup
 def club(link):
     club_id = link.split("/")[-2]
     full_url = "https://hemaratings.com" + link
-    name = "-"
-    short_name = "-"
-    country = "-"
-    state = "-"
-    city = "-"
-    parent_club_id = "-"
+    name = None
+    short_name = None
+    country = None
+    state = None
+    city = None
+    parent_club_id = None
 
     page = requests.get(full_url)
     soup = BeautifulSoup(page.text, features="lxml")
