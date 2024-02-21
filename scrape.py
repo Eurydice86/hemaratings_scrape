@@ -1,7 +1,7 @@
 import argparse
 import os
 
-from src import clubs, events, fighters, rankings
+from src import clubs, events, fighters, ratings
 
 
 def clear():
@@ -16,7 +16,7 @@ def clear():
 
 def main():
     parser = argparse.ArgumentParser(
-        description="The program scrapes the lists of clubs, events, fighters and rankings, and writes the info in a 'data' directory. If no flags are given, nothing will be scraped."
+        description="The program scrapes the lists of clubs, events, fighters and ratings, and writes the info in a SQLite database in a 'data' directory. If no flags are given, nothing will be scraped."
     )
     parser.add_argument("-f", "--fighters", action="store_true", help="scrape fighters")
     parser.add_argument("-c", "--clubs", action="store_true", help="scrape clubs")
@@ -53,11 +53,11 @@ def main():
         print("Fighters scraping completed.")
 
     if ratings_on:
-        rankings.rankings(history=history_on)
-        print("Rankings scraping completed.")
+        ratings.ratings(history=history_on)
+        print("Ratings scraping completed.")
 
     print()
-    print(f"Scrape complete.")
+    print("Scrape complete.")
 
 
 if __name__ == "__main__":
