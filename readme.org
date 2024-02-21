@@ -1,7 +1,7 @@
 #+Title: Hemaratings Scraper
 
 * About
-The script scrapes hemaratings.com, specifically the lists of /events/, /clubs/, /fighters/ and /rankings/ and saves the information locally in files; one file for /events/, one for /clubs/, one for /fighters/ and one for /ratings/.
+The script scrapes hemaratings.com, specifically the lists of /events/, /clubs/, /fighters/ and /rankings/ and saves the information locally in a SQLite3 database.
 
 * Installation of dependencies
 1. Clone the repository locally via https (=git clone https://Eurydice86/hemaratings_scrape=) or ssh (=git clone git@github.com:Eurydice86/hemaratings_scrape.git=)
@@ -10,6 +10,4 @@ The script scrapes hemaratings.com, specifically the lists of /events/, /clubs/,
 Run =python scrape.py= followed by the appropriate flags, depending on what you want to scrape.
 Run =python scrape.py -h= for help.
 * Known issues
-This is an initial version of the scraper, so it is by no means perfect.
-Currently, it only saves the name and id for /clubs/. Scraping of the rest of the info will be added in the future.
-For /events/ and /fighters/, there is more than the rudimentary info saved, but there may be some fields that are skipped.
+This is a by no means perfect version of the scraper. It still does not scrape each event for individual fights.
