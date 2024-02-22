@@ -9,5 +9,5 @@ The script scrapes hemaratings.com, specifically the lists of /events/, /clubs/,
 * Usage
 Run =python scrape.py= followed by the appropriate flags, depending on what you want to scrape.
 Run =python scrape.py -h= for help.
-* Known issues
-This is a by no means perfect version of the scraper. It still does not scrape each event for individual fights.
+* Disclaimer
+This is a by no means perfect version of the scraper.
