@@ -1,11 +1,13 @@
 from datetime import datetime
 
-# import numpy as np
 import requests
+import uuid
 from bs4 import BeautifulSoup
 
+from src import sql_helpers
 
-def event(link, year):
+
+def event(link, year, cursor):
     event_id = link.split("/")[-2]
     full_url = "https://hemaratings.com" + link
     page = requests.get(full_url)
@@ -24,7 +26,6 @@ def event(link, year):
     date_object = datetime.strptime(month_name, "%B")
     month_number = date_object.month
 
-    month_number
     day = metadata[0].split(" ")[1].strip()
     date = f"{day}/{month_number}/{year}"
     country = metadata[1].strip()
@@ -45,8 +46,54 @@ def event(link, year):
         "state": state,
         "city": city,
     }
+
+    categories = sp.find_all("h4")
+    for c in categories:
+        competition = c.text.strip()
+        competition_id = uuid.uuid4()
+        competition_dict = {
+            "competition_id": competition_id,
+            "competition_name": competition,
+            "event_id": event_id,
+        }
+        cursor.execute(sql_helpers.insert("competitions", competition_dict))
+
+        category_table = c.find_next("table")
+        rows = category_table.find_all("tr")
+        rows = rows[1:]
+        for r in rows:
+            entries = r.find_all("td")
+            stage = entries[0].text.strip()
+
+            fighter_1 = entries[1]
+            if fighter_1.find("a"):
+                fighter_1_id = fighter_1.find("a")["href"].split("/")[-2]
+            else:
+                fighter_1_id = None
+            fighter_2 = entries[2]
+            if fighter_2.find("a"):
+                fighter_2_id = fighter_2.find("a")["href"].split("/")[-2]
+            else:
+                fighter_2_id = None
+
+            if entries[3].text.strip() == "WIN":
+                result = 1
+            elif entries[3].text.strip() == "LOSS":
+                result = 2
+            else:
+                result = 0
+            fight_dict = {
+                "fight_id": uuid.uuid4(),
+                "fighter_1_id": fighter_1_id,
+                "fighter_2_id": fighter_2_id,
+                "result": result,
+                "stage": stage,
+                "competition_id": competition_id,
+            }
+            cursor.execute(sql_helpers.insert("fights", fight_dict))
+
     return event_dict
 
 
 if __name__ == "__main__":
-    print(event("/events/details/1926/", 2023))
+    print(event("/events/details/1983/", 2023))
