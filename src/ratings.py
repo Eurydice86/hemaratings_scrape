@@ -65,7 +65,7 @@ def ratings(history=False, year=0, month=0):
                 year = d["value"].split("-")[0]
                 month = d["value"].split("-")[1]
                 print(
-                    f"Scraping month {month:>02}/{year} ({i + 1} of {len(dates)} dates completed).",
+                    f"Scraping backwards in time: month {month:>02}/{year} ({i + 1} of {len(dates)} dates completed).",
                     end="\r",
                 )
 
