@@ -1,9 +1,7 @@
 import requests
 import sqlite3
 from bs4 import BeautifulSoup
-from multiprocessing import Pool
-from multiprocessing import cpu_count
-
+from multiprocessing import Pool, cpu_count
 
 from src import club
 from src import sql_helpers
