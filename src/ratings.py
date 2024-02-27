@@ -2,15 +2,13 @@ import requests
 import sqlite3
 from bs4 import BeautifulSoup
 from datetime import date
+from multiprocessing import Pool, cpu_count
 
 from src import rating
 from src import sql_helpers
 
 
 def ratings(history=False, year=0, month=0):
-    """Goes through the 'rankings' page on Hemaratings and calls the rating
-    function for each of the categories"""
-
     conn = sqlite3.connect("data/hemaratings.db")
     cursor = conn.cursor()
 
