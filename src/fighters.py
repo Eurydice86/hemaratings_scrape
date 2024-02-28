@@ -33,13 +33,15 @@ def fighters():
     ftrs_table = sp.find("table", id="mainTable")
     ftrs = ftrs_table.find_all("a", href=True)
     print("Scraping fighter list")
-    num_processes = cpu_count()
+
 
     fighters_list = []
     for f in ftrs:
         fighter_id = f["href"]
         if fighter_id.split("/")[1] == "fighters":
             fighters_list.append(fighter_id)
+
+    num_processes = cpu_count()
     with Pool(num_processes) as pool:
         results = pool.map(fighter.fighter, fighters_list)
     for f in results:

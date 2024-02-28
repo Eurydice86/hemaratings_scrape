@@ -56,21 +56,21 @@ def ratings(history=False, year=0, month=0):
         }
         cursor.execute(sql_helpers.insert("categories", categories_dict))
 
+        num_processes = cpu_count()
         if history:
             date_dropdown = c_sp.find("select")
             dates = date_dropdown.find_all("option")
+            iterables = []
             for i, d in enumerate(dates):
                 year = d["value"].split("-")[0]
                 month = d["value"].split("-")[1]
-                print(
-                    f"Scraping backwards in time: month {month:>02}/{year} ({i + 1} of {len(dates)} dates completed).",
-                    end="\r",
-                )
+                iterables.append((link, year, month))
 
-                ratings_list = rating.rating(link, year=year, month=month)
+            with Pool(num_processes) as pool:
+                results = pool.starmap(rating.rating, iterables)
+            for ratings_list in results:
                 for line in ratings_list:
                     cursor.execute(sql_helpers.insert("ratings", line))
-            print()
         else:
             year = date.today().year
             month = date.today().month
