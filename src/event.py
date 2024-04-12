@@ -2,6 +2,7 @@ from datetime import datetime
 
 import requests
 import uuid
+import re
 from bs4 import BeautifulSoup
 
 from src import sql_helpers
@@ -11,7 +12,12 @@ def event(link, year, cursor):
     event_id = link.split("/")[-2]
     full_url = "https://hemaratings.com" + link
     page = requests.get(full_url)
+
     soup = BeautifulSoup(page.text, features="lxml")
+
+    if soup.find("h1"):
+        if soup.find("h1").text.strip() == "Service Unavailable":
+            return
 
     sp = soup.find("div", id="main")
     event_name = sp.find("h2").text.strip()
@@ -47,9 +53,10 @@ def event(link, year, cursor):
         "city": city,
     }
 
-    categories = sp.find_all("h4")
-    for c in categories:
-        competition = c.text.strip()
+    tournaments = sp.find_all("div", {"id": re.compile("heading_tournament_*")})
+
+    for t in tournaments:
+        competition = t.find("span").text.strip()
         competition_id = uuid.uuid4()
         competition_dict = {
             "competition_id": competition_id,
@@ -58,7 +65,7 @@ def event(link, year, cursor):
         }
         cursor.execute(sql_helpers.insert("competitions", competition_dict))
 
-        category_table = c.find_next("table")
+        category_table = t.find_next("table")
         rows = category_table.find_all("tr")
         rows = rows[1:]
         for r in rows:
@@ -96,4 +103,4 @@ def event(link, year, cursor):
 
 
 if __name__ == "__main__":
-    print(event("/events/details/1983/", 2023))
+    print(event("/events/details/2019/", 2024))
