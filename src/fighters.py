@@ -1,7 +1,6 @@
 import requests
 import sqlite3
 from bs4 import BeautifulSoup
-from multiprocessing import Pool, cpu_count
 
 from src import fighter
 from src import sql_helpers
@@ -34,21 +33,22 @@ def fighters():
     ftrs = ftrs_table.find_all("a", href=True)
     print("Scraping fighter list")
 
-
     fighters_list = []
-    for f in ftrs:
-        fighter_id = f["href"]
+    for i in range(len(ftrs)):
+        print(f"{100 * (i/len(ftrs)):2.2f}% completed.", end="\r")
+        fighter_id = ftrs[i]["href"]
         if fighter_id.split("/")[1] == "fighters":
-            fighters_list.append(fighter_id)
+            fighters_list.append(fighter.fighter(fighter_id))
+            # fighters_list.append(fighter_id)
 
-    num_processes = cpu_count()
-    with Pool(num_processes) as pool:
-        results = pool.map(fighter.fighter, fighters_list)
-    for f in results:
+    # num_processes = cpu_count()-1
+
+    # with Pool(num_processes) as pool:
+    # results = pool.map(fighter.fighter, fighters_list)
+    for f in fighters_list:
         cursor.execute(sql_helpers.insert("fighters", f))
 
         """
-        print(f"{100 * (i/len(ftrs)):2.2f}% completed.", end="\r")
         line = fighter.fighter(fighter_id)
         cursor.execute(sql_helpers.insert("fighters", line))
         """

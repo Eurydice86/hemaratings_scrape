@@ -63,7 +63,8 @@ def events():
         year = r.find("div")["id"].split("_")[1]
         link = r.find("a", href=True)["href"]
         line = event.event(link, year, cursor)
-        cursor.execute(sql_helpers.insert("events", line))
+        if line:
+            cursor.execute(sql_helpers.insert("events", line))
     conn.commit()
     conn.close()
 

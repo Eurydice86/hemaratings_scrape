@@ -1,6 +1,5 @@
 import argparse
 import os
-from multiprocessing import Process
 
 from src import clubs, events, fighters, ratings
 

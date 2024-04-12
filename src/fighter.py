@@ -1,21 +1,26 @@
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, SoupStrainer
 
 
 def fighter(link):
+    requests_session = requests.Session()
+
     fighter_id = link.split("/")[-2]
     full_url = "https://hemaratings.com" + link
+    page = requests_session.get(full_url)
 
-    page = requests.get(full_url)
-    soup = BeautifulSoup(page.text, "lxml")
+    strained = SoupStrainer("article")
+    soup = BeautifulSoup(page.text, "lxml", parse_only=strained)
+    sp = soup.find("article")
 
-    sp = soup.find("div", id="main")
     fighter_name = sp.find("h2").text.strip()
 
-    dummy = sp.find_all("a", href=True)[0]
     club_id = None
-    if dummy["href"].split("/")[1] == "clubs":
-        club_id = dummy["href"].split("/")[-2]
+    dummy = sp.find_all("a", href=True)
+    if dummy:
+        dummy = dummy[0]
+        if dummy["href"].split("/")[1] == "clubs":
+            club_id = dummy["href"].split("/")[-2]
 
     nationality = None
     if sp.find("i"):
@@ -32,5 +37,8 @@ def fighter(link):
 
 
 if __name__ == "__main__":
-    fighter("/fighters/details/7951/")
-    fighter("/fighters/details/5/")
+    fighter("/fighters/details/1330/")
+#    fighter("/fighters/details/2877/")
+#    fighter("/fighters/details/5/")
+#    fighter("/fighters/details/10769/")
+#    fighter("/fighters/details/13912/")
