@@ -17,6 +17,7 @@ def event(link, year, cursor):
 
     if soup.find("h1"):
         if soup.find("h1").text.strip() == "Service Unavailable":
+            print(f"Event {link} not found!")
             return
 
     sp = soup.find("div", id="main")
