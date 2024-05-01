@@ -42,7 +42,7 @@ def fighters():
             # results.append(fighter.fighter(fighter_id))
             fighters_list.append(fighter_id)
 
-    num_processes = cpu_count() - 1
+    num_processes = 4  # cpu_count()
 
     with Pool(num_processes) as pool:
         results = pool.map(fighter.fighter, fighters_list)

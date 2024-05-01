@@ -56,7 +56,7 @@ def ratings(history=False, year=0, month=0):
         }
         cursor.execute(sql_helpers.insert("categories", categories_dict))
 
-        num_processes = cpu_count()
+        num_processes = 4  # cpu_count()
         if history:
             date_dropdown = c_sp.find("select")
             dates = date_dropdown.find_all("option")
@@ -68,6 +68,9 @@ def ratings(history=False, year=0, month=0):
 
             with Pool(num_processes) as pool:
                 results = pool.starmap(rating.rating, iterables)
+
+            results = [i for i in results if i is not None]
+
             for ratings_list in results:
                 for line in ratings_list:
                     cursor.execute(sql_helpers.insert("ratings", line))

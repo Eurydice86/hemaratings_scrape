@@ -10,11 +10,15 @@ def rating(category, year=0, month=0):
     if int(month) != 0 and int(year) != 0:
         category += f"&year={year}&month={int(month)}"
 
-    date = f"01/{month}/{year}"
+    date = f"01/{int(month):02}/{int(year):04}"
+
     page = requests.get(category)
     sp = BeautifulSoup(page.text, "lxml")
     table = sp.find("table", id="mainTable")
 
+    if not table:
+        print(date, sp.find("body").text)
+        return
     table = table.find("tbody")
     rows = table.find_all("tr")
 
@@ -24,7 +28,7 @@ def rating(category, year=0, month=0):
         weighted_rating = r.find_all("span")[-1].text
         deviation_list = r.find_all("i")[-1]["title"].split("(")
         deviation = deviation_list[-1].strip(")")
-        active = "Inactive" if deviation_list[0].strip() == "Inactive" else "Active"
+        active = "Inactive" if not r.find("td").text.strip() else "Active"
 
         rating_dict = {
             "category_id": category_id,
@@ -43,4 +47,7 @@ def rating(category, year=0, month=0):
 if __name__ == "__main__":
     rating(
         "https://hemaratings.com/periods/details/?ratingsetid=12", year=2023, month=12
+    )
+    rating(
+        "https://hemaratings.com/periods/details/?ratingsetid=1", year=2011, month=11
     )
