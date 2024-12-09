@@ -38,9 +38,9 @@ def event(link, year, cursor):
     country = metadata[1].strip()
     state = None
     city = None
-    if len(metadata) == 3:
+    if len(metadata) < 5:
         city = metadata[2].strip()
-    if len(metadata) == 4:
+    if len(metadata) == 5:
         state = metadata[2].strip()
         country = metadata[1].strip()
         city = metadata[3].strip()
