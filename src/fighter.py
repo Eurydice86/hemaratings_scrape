@@ -37,8 +37,5 @@ def fighter(link):
 
 
 if __name__ == "__main__":
-    fighter("/fighters/details/1330/")
-#    fighter("/fighters/details/2877/")
-#    fighter("/fighters/details/5/")
-#    fighter("/fighters/details/10769/")
-#    fighter("/fighters/details/13912/")
+    f = fighter("/fighters/details/8823/")
+    print(json.dumps(f, indent=2))

@@ -51,5 +51,5 @@ def club(link):
 
 
 if __name__ == "__main__":
-    club("/clubs/details/78/")
-    club("/clubs/details/326/")
+    d = club("/clubs/details/2/")
+    print(json.dumps(d, indent=2))

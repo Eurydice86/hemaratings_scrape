@@ -17,33 +17,43 @@ def event(link, year, cursor):
 
     if soup.find("h1"):
         if soup.find("h1").text.strip() == "Service Unavailable":
-            print(f"Event {link} not found!")
+            print(f"Event {link} not found.")
             return
 
     sp = soup.find("div", id="main")
     event_name = sp.find("h2").text.strip()
+    metadata_div = sp.find("div", class_="row")
+    metadata_table = metadata_div.find_all("td")
 
-    rs = sp.find_all("dd")
     metadata = []
-    for r in rs:
-        metadata.append(r.text.strip())
 
-    month_name = metadata[0].split(" ")[0].strip()
+    for m in metadata_table:
+        metadata.append(m.text.strip())
+
+    metadata_dict = {}
+    for i in range(0, int(len(metadata)), 2):
+        metadata_dict[metadata[i]] = metadata[i + 1]
+
+    event_date = metadata_dict["Date"]
+    month_name = event_date.split(" ")[0].strip()
 
     date_object = datetime.strptime(month_name, "%B")
     month_number = date_object.month
 
-    day = metadata[0].split(" ")[1].strip()
+    day = event_date.split(", ")[0].split(" ")[1].strip()
     date = f"{day}/{month_number}/{year}"
-    country = metadata[1].strip()
-    state = None
-    city = None
-    if len(metadata) < 5:
-        city = metadata[2].strip()
-    if len(metadata) == 5:
-        state = metadata[2].strip()
-        country = metadata[1].strip()
-        city = metadata[3].strip()
+
+    country = metadata_dict["Country"]
+
+    try:
+        city = metadata_dict["City"]
+    except:
+        city = None
+
+    try:
+        state = metadata_dict["State"]
+    except:
+        state = None
 
     event_dict = {
         "event_id": event_id,
@@ -104,4 +114,11 @@ def event(link, year, cursor):
 
 
 if __name__ == "__main__":
-    print(event("/events/details/2019/", 2024))
+    import json
+
+    e = event("/events/details/2019/", 2024)
+    print(json.dumps(e, indent=2))
+    e = event("/events/details/2330/", 2025)
+    print(json.dumps(e, indent=2))
+    e = event("/events/details/1813/", 2023)
+    print(json.dumps(e, indent=2))

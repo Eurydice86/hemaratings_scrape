@@ -1,5 +1,4 @@
 import requests
-
 from bs4 import BeautifulSoup
 
 
@@ -41,6 +40,7 @@ def rating(category, year=0, month=0):
 
 
 if __name__ == "__main__":
-    rating(
+    r = rating(
         "https://hemaratings.com/periods/details/?ratingsetid=12", year=2023, month=12
     )
+    print(json.dumps(r, indent=2))
