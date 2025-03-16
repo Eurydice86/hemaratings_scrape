@@ -41,7 +41,7 @@ def event(link, year, cursor):
     month_number = date_object.month
 
     day = event_date.split(", ")[0].split(" ")[1].strip()
-    date = f"{day}/{month_number}/{year}"
+    date = f"{year}-{month_number}-{day}"
 
     country = metadata_dict["Country"]
 
