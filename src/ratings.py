@@ -57,6 +57,7 @@ def ratings(history=False, year=0, month=0):
         cursor.execute(sql_helpers.insert("categories", categories_dict))
 
         num_processes = cpu_count()
+        
         if history:
             date_dropdown = c_sp.find("select")
             dates = date_dropdown.find_all("option")

@@ -9,5 +9,16 @@ The script scrapes hemaratings.com, specifically the lists of /events/, /clubs/,
 * Usage
 Run =python scrape.py= followed by the appropriate flags, depending on what you want to scrape.
 Run =python scrape.py -h= for help.
+
+** Flags
+-h, --help      show the help message and exit
+-f, --fighters  scrape fighters
+-c, --clubs     scrape clubs
+-e, --events    scrape events
+-r, --ratings   scrape ratings
+--history       scrape the full history of ratings (only works if -r is active)
+
+i.e., if running =python scrape.py -fcer --history=, gets the full data, including historical (monthly) rankings and ratings for each of the available weapon categories.
+
 * Disclaimer
-This is a by no means perfect version of the scraper.
+This is a by no means perfect version of the scraper. It is working as of March 2025, but updates/additions to the hemaratings pages might cause it to break.
