@@ -1,15 +1,50 @@
 import requests
 import sqlite3
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, SoupStrainer
 from multiprocessing import Pool, cpu_count
 
-from src import fighter
 from src import sql_helpers
 
 
+def fighter(link):
+    """Extracts the id, name, nationality and club id of a fighter, given the link to their Hemagon profile page and returns a dictionary with the info."""
+    
+    requests_session = requests.Session()
+
+    fighter_id = link.split("/")[-2]
+    full_url = "https://hemaratings.com" + link
+    page = requests_session.get(full_url)
+
+    strained = SoupStrainer("article")
+    soup = BeautifulSoup(page.text, "lxml", parse_only=strained)
+    sp = soup.find("article")
+
+    fighter_name = sp.find("h2").text.strip()
+
+    club_id = None
+    dummy = sp.find_all("a", href=True)
+    if dummy:
+        dummy = dummy[0]
+        if dummy["href"].split("/")[1] == "clubs":
+            club_id = dummy["href"].split("/")[-2]
+
+    nationality = None
+    if sp.find("i"):
+        nationality = sp.find("i")["title"]
+
+    fighter_dict = {
+        "fighter_id": fighter_id,
+        "name": fighter_name,
+        "nationality": nationality,
+        "club_id": club_id,
+    }
+
+    return fighter_dict
+
+
 def fighters():
-    """Goes through the 'fighters' page on Hemaratings and calls the fighter
-    function for each of the fighters on the list"""
+    """Generates a list of all the fighters on the Hemaratings 'fighters' page and calls the fighter
+    function for each, then collects the fighter info dictionaries and writes them into the database."""
 
     conn = sqlite3.connect("data/hemaratings.db")
     cursor = conn.cursor()
@@ -36,23 +71,16 @@ def fighters():
 
     fighters_list = []
     for i in range(len(ftrs)):
-        # print(f"{100 * (i/len(ftrs)):2.2f}% completed.", end="\r")
         fighter_id = ftrs[i]["href"]
         if fighter_id.split("/")[1] == "fighters":
-            # results.append(fighter.fighter(fighter_id))
             fighters_list.append(fighter_id)
 
     num_processes = cpu_count() - 1
 
     with Pool(num_processes) as pool:
-        results = pool.map(fighter.fighter, fighters_list)
+        results = pool.map(fighter, fighters_list)
     for f in results:
         cursor.execute(sql_helpers.insert("fighters", f))
-
-        """
-        line = fighter.fighter(fighter_id)
-        cursor.execute(sql_helpers.insert("fighters", line))
-        """
 
     conn.commit()
     conn.close()
