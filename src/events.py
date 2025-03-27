@@ -10,6 +10,8 @@ from src import sql_helpers
 
 
 def events():
+    """Generates a list of all the events from the Hemaratings 'events' page and calls the event function for each."""
+    
     conn = sqlite3.connect("data/hemaratings.db")
     cursor = conn.cursor()
 
@@ -73,6 +75,8 @@ def events():
 
 
 def event(link, year, cursor=None):
+    """Extracts the event info given its Hemaratings link, returns a dictionary for the event and writes the competitions info into the database."""
+    
     event_id = link.split("/")[-2]
     full_url = "https://hemaratings.com" + link
     page = requests.get(full_url)

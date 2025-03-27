@@ -41,14 +41,10 @@ def main():
         os.mkdir("data")
 
     if clubs_on:
-        # process_clubs = Process(target=clubs.clubs)
-        # process_clubs.start()
         clubs.clubs()
         print("Club scraping completed.")
 
     if events_on:
-        # process_events = Process(target=events.events)
-        # process_events.start()
         events.events()
         print("Event scraping completed.")
 
