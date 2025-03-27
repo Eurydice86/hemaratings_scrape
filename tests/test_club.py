@@ -1,8 +1,8 @@
-from src import club
+from src import clubs
 
 
 def test_no_state():
-    c = club.club("/clubs/details/2/")
+    c = clubs.club("/clubs/details/2/")
     assert c["club_name"] == "EHMS"
     assert c["club_short_name"] == "EHMS"
     assert c["country"] == "Finland"
@@ -12,7 +12,7 @@ def test_no_state():
     
 
 def test_all():
-    c = club.club("/clubs/details/1672/")
+    c = clubs.club("/clubs/details/1672/")
     assert c["club_name"] == "College of Silva Vulcani"
     assert c["club_short_name"] == None
     assert c["country"] == "United States"
@@ -23,7 +23,7 @@ def test_all():
 
 
 def test_city():
-    c = club.club("/clubs/details/562/")
+    c = clubs.club("/clubs/details/562/")
     assert c["club_name"] == "Wiener Fecht- und Ausdauersportrunde"
     assert c["club_short_name"] == "WFA"
     assert c["country"] == "Austria"
