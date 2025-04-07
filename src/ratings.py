@@ -26,7 +26,7 @@ def rating(category, year=0, month=0):
         name = r.find("a")
         fighter_id = name["href"].split("/")[-2]
         weighted_rating = r.find_all("span")[-1].text
-        deviation_list = r.find_all("i")[-1]["title"].split("(")
+        deviation_list = r.find_all("i")[1]["title"].split("(")
         deviation = deviation_list[-1].strip(")")
         active = "Inactive" if deviation_list[0].strip() == "Inactive" else "Active"
 
@@ -117,7 +117,3 @@ def ratings(history=False, year=0, month=0):
 
     conn.commit()
     conn.close()
-
-
-if __name__ == "__main__":
-    ratings(history=True)
